@@ -54,3 +54,26 @@ docker images
 ----splunk cred-----
 username : krishna
 password: Manjula17*
+
+--------------------------------------------------------------------------------
+----MYSQL installation on ubuntu-----------
+sudo apt update
+
+sudo apt install mysql-server
+
+sudo systemctl start mysql.service
+----configure mysql----
+sudo mysql
+ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'password';
+exit
+
+mysql -u root -p
+
+--- again go to default passowrd metho using this---- we conn't use this one
+//ALTER USER 'root'@'localhost' IDENTIFIED WITH auth_socket;
+
+sudo mysql_secure_installation
+everything give yes.. disallow root user give no..
+
+mysql --version
+
